@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ApiTokensAzureStorage/ApiTokensAzureStorage.csproj" />
+  <Project Path="MvcCoreSasAzureStorage/MvcCoreSasAzureStorage.csproj" />
+</Solution>
