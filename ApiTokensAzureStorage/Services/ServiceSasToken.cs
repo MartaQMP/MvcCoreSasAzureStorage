@@ -9,7 +9,7 @@ namespace ApiTokensAzureStorage.Services
 
         public ServiceSasToken(IConfiguration configuration)
         {
-            string azureKeys = configuration.GetValue<string>("AzureKeys:StorageAccounts");
+            string azureKeys = configuration.GetValue<string>("AzureKeys:StorageAccount");
             TableServiceClient tableService = new TableServiceClient(azureKeys);
             this.tableAlumnos = tableService.GetTableClient("alumnos");
         }
