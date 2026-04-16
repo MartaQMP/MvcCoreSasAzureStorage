@@ -1,0 +1,47 @@
+﻿@model List<Alumno>
+
+<h1>Alumnos</h1>
+<hr />
+<a class="btn btn-outline-secondary" asp-action="Create">+ Nuevo alumno</a>
+<hr />
+<form method="post">
+    <label class="form-label">Introduce un curso:</label>
+    <input name="curso" type="text" class="form-control" />
+    <br />
+    <button class="btn btn-outline-dark">Buscar alumnos</button>
+</form>
+<hr />
+@if(Model != null){
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id Alumno</th>
+            <th>Curso</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Nota</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdAlumno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Curso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nota)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+}
